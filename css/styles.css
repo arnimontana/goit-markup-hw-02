@@ -1,0 +1,300 @@
+/* ==== file styles.css created to work with both files (index.html and portfolio.html) ==== */
+
+:root {
+    --font-family: 'Raleway', 'Roboto', sans-serif;
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
+    --primary-text-color-theme-dark: #FFFFFF;
+    --secondary-text-color-theme-dark: #757575;
+    --primary-text-color-theme-light: #212121;
+    --secondary-text-color-theme-light: #757575;
+    --contact-color-alpha: rgba(255, 255, 255, 0.6);
+    --accent-color: #2196F3;
+    --background-color: #2F303A;
+    --btn-background-color: #F5F4FA;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.list {
+    list-style: none;
+}
+
+.logo {
+    font-family: var(--secondary-font);
+    color: var(--accent-color);    
+    font-weight: 700;
+    font-size: 26px;   
+    line-height: 1.19;
+    letter-spacing: 0.03;
+}
+
+.logo-back-dark {
+    color: var(--primary-text-color-theme-light);    
+}
+
+.logo-back-light {
+    color: var(--primary-text-color-theme-dark);    
+}
+
+img {
+    display: block;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 15px;    
+    outline: 2px dashed #f44336;
+  }
+*/
+
+body {
+    color: var(--secondary-text-color-theme-dark);
+    font-family: var(--primary-font);
+    font-size: 16px;
+    letter-spacing:0.03em;
+    }
+
+/*==== HEADER ====*/
+
+.nav {    
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.menu-link {
+    color: var(--primary-text-color-theme-light);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+    color: var(--accent-color);
+}
+
+.contacts-mail, 
+.contacts-phone-number {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02;
+}
+
+.portfolio-title {
+    color: var(--primary-text-color-theme-light);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+}
+.img-page1,
+.img-page2 {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    }
+
+.contacts-mail, 
+.contacts-phone-number,
+.contacts-footer-address,
+.contacts-footer-mail {
+    color: transparent;
+}
+
+.mail:hover,
+.mail:focus {
+    color: var(--accent-color);
+}
+
+.phone-number:hover,
+.phone-number:focus {
+    color: var(--secondary-text-color-theme-dark);
+}
+
+.footer-mail:hover
+.footer-mail:focus {
+    color: var(--accent-color);
+}
+
+.footer-phone-number:hover
+.footer-phone-number:focus {
+    color: var(--accent-color);
+}
+
+/*==== HERO ====*/
+
+.section-solutions {
+    color: var(--primary-text-color-theme-dark);  
+    width: 1200px;
+    height: 600px;
+    left: 0px;
+    top: 80px;
+    text-align: center;
+    text-transform: uppercase;
+    background: var(--background-color);
+}
+
+/*
+Не знайшов можливості перенесеня тексту "Ефективні рішення..." окрім як розліділити його на 2 заголовка;
+Не вдається відредагувати текст за доаомогою класу solutions-textб тому помістив деякі його CSS значення класом вище;
+Також не вдається відцентрувати группу тексту "Ефективні рішення..." з кнопкою посередині поля бекграунду
+.solutions-text {
+    background: var(--background-color);
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1,36;
+    text-align: center;
+    letter-spacing: 0.06em;   
+}
+*/
+
+.modal-open-btn { 
+    color: var(--primary-text-color-theme-dark); 
+    cursor: pointer;
+    width: 216px;
+    height: 50px;       
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.88;
+    font-weight: 700;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+}
+
+.link-open-btn-all:hover,
+.link-open-btn-all:focus,
+.link-open-btn-sites:hover,
+.link-open-btn-sites:focus,
+.link-open-btn-addones:hover,
+.link-open-btn-addones:focus,
+.link-open-btn-design:hover,
+.link-open-btn-design:focus,
+.link-open-btn-marceting:hover,
+.link-open-btn-marceting:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-text-color-theme-dark);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.link-open-btn-all,
+.link-open-btn-sites,
+.link-open-btn-addones,
+.link-open-btn-design,
+.link-open-btn-marceting {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color-theme-light);
+    background-color: var(--btn-background-color);
+    border-radius: 4px;
+}
+
+.link-open-btn-all {
+    width: 73px;
+    height: 38px;
+    left: 512px;
+    top: 174px;
+}
+
+.link-open-btn-sites {
+    width: 125px;
+    height: 38px;
+    left: 593px;
+    top: 174px;
+}
+
+.link-open-btn-addones {
+    width: 112px;
+    height: 38px;
+    left: 726px;
+    top: 174px;
+}
+
+.link-open-btn-design {
+    width: 103px;
+    height: 38px;
+    left: 846px;
+    top: 174px;
+}
+
+.link-open-btn-marceting {
+    width: 130px;
+    height: 38px;
+    left: 957px;
+    top: 174px;
+}
+
+/*=====draft=====
+    cursor: pointer;
+    width: 73px;
+    height: 38px;
+    left: 512px;
+    background: var(--accent-color);
+    top: 174px;
+    
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.64;
+    
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+
+.link-open-btn:hover
+.link-open-btn:focus {
+
+} 
+=====draft=====*/
+
+.menu-item {
+    font-style: normal
+}
+
+.page-footer {
+    width: 1600px;
+    height: 252px;
+    left: 0px;
+    top: 2094px;
+    background: var(--background-color);
+}
+
+.footer-address {
+    color: var(--primary-text-color-theme-dark);
+    font-style: normal;
+}
+
+.footer-mail {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-phone-number {
+    color: var(--primary-text-color-theme-dark);
+}
+
+
+
+
