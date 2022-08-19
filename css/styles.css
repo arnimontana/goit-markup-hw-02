@@ -23,12 +23,12 @@
 }
 
 .logo {
-    font-family: var(--secondary-font);
-    color: var(--accent-color);    
+    font-family: var(--secondary-font);        
     font-weight: 700;
     font-size: 26px;   
     line-height: 1.19;
-    letter-spacing: 0.03;
+    letter-spacing: 0.03em;
+    color: var(--accent-color);
 }
 
 .logo-back-dark {
@@ -47,6 +47,15 @@ button {
     cursor: pointer;
 }
 
+.modal-open-btn,
+.link-open-btn-all,
+.link-open-btn-sites,
+.link-open-btn-addones,
+.link-open-btn-design,
+.link-open-btn-marceting {
+    font-family: var(--font-family);
+}
+
 a {
     text-decoration: none;
 }
@@ -60,14 +69,18 @@ a {
   }
 */
 
-body {
-    color: var(--secondary-text-color-theme-dark);
+body {    
     font-family: var(--primary-font);
     font-size: 16px;
     letter-spacing:0.03em;
-    }
+}
 
 /*==== HEADER ====*/
+
+.page-header {
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
 .nav {    
     font-weight: 500;
@@ -77,11 +90,11 @@ body {
 }
 
 .menu-link {
-    color: var(--primary-text-color-theme-light);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.02;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color-theme-light);
 }
 
 .menu-link:hover,
@@ -94,21 +107,68 @@ body {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.02;
+    letter-spacing: 0.02em;
+    color: var(--secondary-text-color-theme-light);
 }
 
-.portfolio-title {
-    color: var(--primary-text-color-theme-light);
+/*==== HERO ====*/
+
+.hidden-text-heading {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--secondary-text-color-theme-light);
 }
+
+.text-heading {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.66;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color-theme-light);
+}
+
+.menu-features {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-text-color-theme-light);
+}
+
+.features-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color-theme-dark);
+}
+
+.portfolio-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--primary-text-color-theme-light);
+}
+
+.portfolio-title-txt {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;    
+    color: var(--secondary-text-color-theme-light);
+}
+
 .img-page1,
 .img-page2 {
     display: block;
     max-width: 100%;
     height: 100%;
-    }
+}
 
 .contacts-mail, 
 .contacts-phone-number,
@@ -117,58 +177,48 @@ body {
     color: transparent;
 }
 
-.mail:hover,
-.mail:focus {
-    color: var(--accent-color);
+.mail,
+.phone-number {
+    color: var(--secondary-text-color-theme-light);
 }
 
+.mail:hover,
+.mail:focus,
 .phone-number:hover,
 .phone-number:focus {
-    color: var(--secondary-text-color-theme-dark);
-}
-
-.footer-mail:hover
-.footer-mail:focus {
-    color: var(--accent-color);
-}
-
-.footer-phone-number:hover
-.footer-phone-number:focus {
-    color: var(--accent-color);
+    color: var(--primary-text-color-theme-light);
 }
 
 /*==== HERO ====*/
 
-.section-solutions {
-    color: var(--primary-text-color-theme-dark);  
-    width: 1200px;
-    height: 600px;
+.section-solutions {      
+    padding: 200px 452px;
     left: 0px;
     top: 80px;
     text-align: center;
     text-transform: uppercase;
+    color: var(--primary-text-color-theme-dark);
     background: var(--background-color);
 }
 
 /*
 Не знайшов можливості перенесеня тексту "Ефективні рішення..." окрім як розліділити його на 2 заголовка;
-Не вдається відредагувати текст за доаомогою класу solutions-textб тому помістив деякі його CSS значення класом вище;
-Також не вдається відцентрувати группу тексту "Ефективні рішення..." з кнопкою посередині поля бекграунду
-.solutions-text {
-    background: var(--background-color);
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1,36;
-    text-align: center;
-    letter-spacing: 0.06em;   
-}
 */
 
-.modal-open-btn { 
-    color: var(--primary-text-color-theme-dark); 
-    cursor: pointer;
-    width: 216px;
-    height: 50px;       
+.solutions-text {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--primary-text-color-theme-dark);
+}
+
+.modal-open-btn {
+    border-radius: 4px;
+    padding: 10px 32px;    
+    cursor: pointer;  
     background: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -178,28 +228,19 @@ body {
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
+    text-decoration: none;
+    color: var(--primary-text-color-theme-dark);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);    
 }
 
-.link-open-btn-all:hover,
-.link-open-btn-all:focus,
-.link-open-btn-sites:hover,
-.link-open-btn-sites:focus,
-.link-open-btn-addones:hover,
-.link-open-btn-addones:focus,
-.link-open-btn-design:hover,
-.link-open-btn-design:focus,
-.link-open-btn-marceting:hover,
-.link-open-btn-marceting:focus {
+.list-btn:hover,
+.list-btn:focus {
     background-color: var(--accent-color);
     color: var(--primary-text-color-theme-dark);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.link-open-btn-all,
-.link-open-btn-sites,
-.link-open-btn-addones,
-.link-open-btn-design,
-.link-open-btn-marceting {
+.list-btn {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
@@ -208,44 +249,10 @@ body {
     color: var(--primary-text-color-theme-light);
     background-color: var(--btn-background-color);
     border-radius: 4px;
+    min-width: 38px;
 }
 
-.link-open-btn-all {
-    width: 73px;
-    height: 38px;
-    left: 512px;
-    top: 174px;
-}
-
-.link-open-btn-sites {
-    width: 125px;
-    height: 38px;
-    left: 593px;
-    top: 174px;
-}
-
-.link-open-btn-addones {
-    width: 112px;
-    height: 38px;
-    left: 726px;
-    top: 174px;
-}
-
-.link-open-btn-design {
-    width: 103px;
-    height: 38px;
-    left: 846px;
-    top: 174px;
-}
-
-.link-open-btn-marceting {
-    width: 130px;
-    height: 38px;
-    left: 957px;
-    top: 174px;
-}
-
-/*=====draft=====
+/*===== draft =====
     cursor: pointer;
     width: 73px;
     height: 38px;
@@ -263,22 +270,13 @@ body {
     letter-spacing: 0.03em;
 }
 
-
-.link-open-btn:hover
-.link-open-btn:focus {
-
-} 
-=====draft=====*/
+===== draft =====*/
 
 .menu-item {
     font-style: normal
 }
 
 .page-footer {
-    width: 1600px;
-    height: 252px;
-    left: 0px;
-    top: 2094px;
     background: var(--background-color);
 }
 
@@ -287,14 +285,16 @@ body {
     font-style: normal;
 }
 
-.footer-mail {
-    color: rgba(255, 255, 255, 0.6);
+.footer-mail,
+.footer-phone-number {
+    color: var(--contact-color-alpha);
 }
 
-.footer-phone-number {
+.footer-mail:hover,
+.footer-mail:focus,
+.footer-phone-number:hover,
+.footer-phone-number:focus {
     color: var(--primary-text-color-theme-dark);
 }
-
-
 
 
