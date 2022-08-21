@@ -1,13 +1,14 @@
 /* ==== file styles.css created to work with both files (index.html and portfolio.html) ==== */
 
 :root {
-    --font-family: 'Raleway', 'Roboto', sans-serif;
+    --font-family: 'Roboto', 'Raleway', sans-serif;
     --primary-font: 'Roboto', sans-serif;
     --secondary-font: 'Raleway', sans-serif;
     --primary-text-color-theme-dark: #FFFFFF;
     --secondary-text-color-theme-dark: #757575;
     --primary-text-color-theme-light: #212121;
     --secondary-text-color-theme-light: #757575;
+    --text-color-theme-black: #000000;
     --contact-color-alpha: rgba(255, 255, 255, 0.6);
     --accent-color: #2196F3;
     --background-color: #2F303A;
@@ -108,7 +109,6 @@ body {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--secondary-text-color-theme-light);
 }
 
 /*==== HERO ====*/
@@ -130,10 +130,10 @@ body {
     color: var(--primary-text-color-theme-light);
 }
 
-.menu-features {
+.features-title {
     font-weight: 700;
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 1.16;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--primary-text-color-theme-light);
@@ -177,26 +177,29 @@ body {
     color: transparent;
 }
 
-.mail,
+.mail {
+    color: var(--accent-color)
+}
+
 .phone-number {
     color: var(--secondary-text-color-theme-light);
 }
 
+/*
 .mail:hover,
-.mail:focus,
+.mail:focus {
+    color: var(--accent-color);
+}
 .phone-number:hover,
 .phone-number:focus {
     color: var(--primary-text-color-theme-light);
 }
+*/
 
 /*==== HERO ====*/
 
-.section-solutions {      
-    padding: 200px 452px;
-    left: 0px;
-    top: 80px;
-    text-align: center;
-    text-transform: uppercase;
+.section-solutions {
+    text-align: center;    
     color: var(--primary-text-color-theme-dark);
     background: var(--background-color);
 }
@@ -208,33 +211,44 @@ body {
 .solutions-text {
     font-weight: 900;
     font-size: 44px;
-    line-height: 1.36;
-    text-align: center;
+    line-height: 1.3;
     letter-spacing: 0.06em;
+    text-align: center;
     text-transform: uppercase;
     color: var(--primary-text-color-theme-dark);
 }
 
-.modal-open-btn {
-    border-radius: 4px;
+.modal-open-btn {    
+    border-radius: 4px;  
     padding: 10px 32px;    
-    cursor: pointer;  
-    background: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+    background: var(--accent-color);
+    color: var(--primary-text-color-theme-darck);
     font-size: 16px;
     line-height: 1.88;
     font-weight: 700;
     align-items: center;
     text-align: center;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.06em;    
+    /*
+    border: 1px solid var(--text-color-theme-black);
+    */
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);    
+}
+
+.modal-open-btn.hover,
+.modal-open-btn.focus {
+    display: flex;
     text-decoration: none;
+    cursor: pointer;
     color: var(--primary-text-color-theme-dark);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);    
+    background: #188CE8;
 }
 
 .list-btn:hover,
 .list-btn:focus {
+    /*display: flex;*/
+    cursor: pointer;
     background-color: var(--accent-color);
     color: var(--primary-text-color-theme-dark);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -246,10 +260,24 @@ body {
     line-height: 1.63;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--primary-text-color-theme-light);
+    color: #ffffff
+    var(--primary-text-color-theme-light);
     background-color: var(--btn-background-color);
     border-radius: 4px;
     min-width: 38px;
+}
+
+.menu-team {
+    font-style: normal;
+}
+
+.team-title-name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-text-color-theme-light);
 }
 
 /*===== draft =====
@@ -273,7 +301,7 @@ body {
 ===== draft =====*/
 
 .menu-item {
-    font-style: normal
+    font-style: normal;
 }
 
 .page-footer {
@@ -296,5 +324,5 @@ body {
 .footer-phone-number:focus {
     color: var(--primary-text-color-theme-dark);
 }
-
+/* ===== /HERO =====*/
 
