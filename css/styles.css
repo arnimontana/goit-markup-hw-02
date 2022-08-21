@@ -11,6 +11,8 @@
     --text-color-theme-black: #000000;
     --contact-color-alpha-06: rgba(255, 255, 255, 0.6);
     --accent-color: #2196F3;
+    --btn-color-background: #2F303A;
+    --accent-color-btn: #188CE8;
     --background-color: #2F303A;
     --btn-background-color: #F5F4FA;
 }
@@ -73,7 +75,7 @@ a {
 body {    
     font-family: var(--primary-font);
     font-size: 16px;
-    letter-spacing:0.03em;
+    letter-spacing: 0.03em;
 }
 
 /*==== HEADER ====*/
@@ -177,7 +179,8 @@ body {
     color: transparent;
 }
 
-.mail, .phone-number {
+.mail,
+.phone-number {
     color: var(--secondary-text-color-theme-light);
 }
 
@@ -209,30 +212,36 @@ body {
 }
 
 .modal-open-btn {    
-    border-radius: 4px;  
     padding: 10px 32px;    
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     background: var(--accent-color);
-    color: var(--primary-text-color-theme-darck);
+    border-radius: 4px;
+    color: var(--primary-text-color-theme-dark);    
+    font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
-    font-weight: 700;
-    align-items: center;
     text-align: center;
     letter-spacing: 0.06em;    
     /*
-    border: 1px solid var(--text-color-theme-black);
+    border: 1px solid #000000;
     */
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);    
 }
 
+
 .modal-open-btn:hover,
 .modal-open-btn:focus {
-    display: flex;
-    text-decoration: none;
+    /*display: flex;*/
     cursor: pointer;
-    color: var(--primary-text-color-theme-dark);
-    background: #188CE8;
+    background: var(--accent-color-btn);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    /*display: flex;*/
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--primary-text-color-theme-dark);                                                             
 }
 
 .list-btn:hover,
@@ -245,12 +254,13 @@ body {
 }
 
 .list-btn {
+    font-family: var(--primary-font);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #ffffff
+    color: var(--primary-text-color-theme-dark)
     var(--primary-text-color-theme-light);
     background-color: var(--btn-background-color);
     border-radius: 4px;
