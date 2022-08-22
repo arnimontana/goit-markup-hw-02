@@ -1,4 +1,12 @@
 /* ==== file styles.css created to work with both files (index.html and portfolio.html) ==== */
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
 
 :root {
     --font-family: 'Roboto', 'Raleway', sans-serif;
@@ -16,6 +24,17 @@
     --background-color: #2F303A;
     --btn-background-color: #F5F4FA;
 }
+
+.container {
+    display: inline-block;
+    max-width: 1200px;
+    /*
+    padding-left: 15px;
+    padding-right: 15px;
+    */
+    margin-right: auto;
+    margin-left: auto;
+  }
 
 .link {
     text-decoration: none;
@@ -142,7 +161,6 @@ body {
 }
 
 .features-text {
-    font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -158,7 +176,6 @@ body {
 }
 
 .portfolio-title-txt {
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;    
@@ -225,7 +242,6 @@ body {
     /*
     border: 1px solid #000000;
     */
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);    
 }
 
 
@@ -236,8 +252,6 @@ body {
     background: var(--accent-color-btn);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-
-    /*display: flex;*/
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
@@ -279,43 +293,38 @@ body {
     color: var(--primary-text-color-theme-light);
 }
 
-/*===== draft =====
-    cursor: pointer;
-    width: 73px;
-    height: 38px;
-    left: 512px;
-    background: var(--accent-color);
-    top: 174px;
-    
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.64;
-    
-    text-align: center;
-    letter-spacing: 0.03em;
+.teaam-title-position {
+     color: var(--secondary-text-color-theme-dark);
+     line-height: 1.19;
+     font-size: 16px;
+     letter-spacing: 0.03em;
 }
 
-===== draft =====*/
 
-.menu-item {
-    font-style: normal;
-}
+/* ==== identical to box height ====
+text-align: center;
+letter-spacing: 0.03em;
+}*/
 
 .page-footer {
     background: var(--background-color);
 }
 
+.menu-item {
+    font-style: normal;
+}
+
 .footer-address {
     color: var(--primary-text-color-theme-dark);
     font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
 }
 
 .footer-mail,
 .footer-phone-number {
     color: var(--contact-color-alpha-06);
-    font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -325,9 +334,10 @@ body {
 .footer-mail:focus,
 .footer-phone-number:hover,
 .footer-phone-number:focus {
+    color: var(--primary-text-color-theme-dark);
     /*
     border: 1px solid #000000;
-    */
+    */    
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
